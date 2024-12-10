@@ -9,15 +9,18 @@ import About from './Pages/About'
 import MyProfile from './Pages/MyProfile'
 import MyAppointment from './Pages/MyAppointment'
 import Appointment from './Pages/Appointment'
+import NavBar from './Components/NavBar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
       <div className=' mx-4 sm:mx-[10%]'>
+      <NavBar/>
       <Routes>
+         
         <Route path='/' element={<HomePage/>} />
-        <Route path='/doctor' element={<Doctor/>} />
+        <Route path='/doctors' element={<Doctor/>} />
         <Route path='/doctor/:speciality' element={<Doctor/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/contact' element={<Contact/>} />
