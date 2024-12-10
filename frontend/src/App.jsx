@@ -1,13 +1,35 @@
 import { useState } from 'react'
-
+ import {BrowserRouter ,Routes ,Route} from 'react-router-dom'
+import HomePage from './Pages/HomePage'
+import Login from './Pages/Login'
+import Register from './Pages/Register'
+import Doctor from './Pages/Doctor'
+import Contact from './Pages/Contact'
+import About from './Pages/About'
+import MyProfile from './Pages/MyProfile'
+import MyAppointment from './Pages/MyAppointment'
+import Appointment from './Pages/Appointment'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div className=' text-5xl'>holl</div>
-    </>
+      <div className=' mx-4 sm:mx-[10%]'>
+      <Routes>
+        <Route path='/' element={<HomePage/>} />
+        <Route path='/doctor' element={<Doctor/>} />
+        <Route path='/doctor/:speciality' element={<Doctor/>} />
+        <Route path='/login' element={<Login/>} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/my-profile' element={<MyProfile/>} />
+        <Route path='/my-appointment' element={<MyAppointment/>} />
+        <Route path='/appointment/:appId' element={<Appointment/>} />
+        <Route path='/registor' element={<Register/>} />
+      </Routes>
+      </div>
+    
+      
   )
 }
 
