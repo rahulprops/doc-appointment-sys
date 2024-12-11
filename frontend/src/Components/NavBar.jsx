@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 const NavBar = () => {
     const navigate=useNavigate()
     const [showMenu,setShowMenu]=useState(false)
-    const [token,setToken]=useState(false)
+    const [token,setToken]=useState(true)
   return (
     <div className=' flex justify-between items-center py-3 text-sm mb-5 border-b border-b-slate-500 '>
         <div>logo</div>
